@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import MyButton from '../src/components/button';
 
+const H1 = styled.h1`
+  color: blue;
+  margin: 20px 30px;
+  text-transform: uppercase;
+  margin-left: 200px;
+`;
+
+const Img = styled.img`
+  height: 100px;
+  width: 100px;
+  border-radius: 30px;
+  transform: rotateZ(90deg);
+  transition: 1s ease-in;
+`;
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <H1>This is LevelUp Academy</H1>
+        <Img src={logo} alt="the logo" />
+        <MyButton primary>My Button</MyButton>
+        <div className="alert alert-success">This is an alert</div>
       </div>
     );
   }
