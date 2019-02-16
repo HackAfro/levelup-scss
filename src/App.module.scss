@@ -1,9 +1,10 @@
 @import "./partial/partial";
 
 .header{
+  @extend %capitalize-text;
+
   color: blue;
   margin: 20px 30px;
-  text-transform: uppercase;
   margin-left: 200px;
 
   &:hover{
@@ -23,6 +24,7 @@
 
 .button{
   @extend %button;
+  @extend %capitalize-text;
 
   background-color: $buttonPrimary;
 }
